@@ -1,0 +1,14 @@
+{
+  "waveforms": {
+    "0": [0.5, 0.5, 0.5, 0.5]
+  },
+  "weights": {},
+  "acquisitions": {},
+  "program": [
+    ["", "move", "1000, R0", "DANGEROUS: Q1 Core may not keep up"],
+    ["start", "play", "0,0,4", "4 ns"],
+    ["", "wait", "4", "4 ns"],
+    ["", "loop", "R0, @start", "Total body: 8 ns"],
+    ["", "stop", "", ""]
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "waveforms": {
+    "0": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  },
+  "weights": {},
+  "acquisitions": {},
+  "program": [
+    ["", "set_mrk", "1", "Set marker high (latched)"],
+    ["", "upd_param", "", "Commit"],
+    ["", "wait", "20", "Marker high for 20 ns"],
+    ["", "set_mrk", "0", "Set marker low"],
+    ["", "upd_param", "", "Commit"],
+    ["", "play", "0,0,40", "Continue with microwave pulse"],
+    ["", "stop", "", ""]
+  ]
+}

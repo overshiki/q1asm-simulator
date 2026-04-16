@@ -1,0 +1,14 @@
+{
+  "waveforms": {
+    "0": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  },
+  "weights": {},
+  "acquisitions": {},
+  "program": [
+    ["", "play", "0,0,20", "X90 pulse"],
+    ["", "set_phase", "90,0", "Shift NCO phase by 90 degrees"],
+    ["", "upd_param", "", "Commit"],
+    ["", "play", "0,0,20", "Next pulse sees +90 phase offset"],
+    ["", "stop", "", ""]
+  ]
+}

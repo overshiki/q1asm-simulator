@@ -1,0 +1,16 @@
+{
+  "waveforms": {
+    "0": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  },
+  "weights": {},
+  "acquisitions": {
+    "0": {"num_bins": 1}
+  },
+  "program": [
+    ["", "play", "0,0,20", "First pi/2 pulse"],
+    ["", "wait", "1000", "Free evolution: 1 us"],
+    ["", "play", "0,0,20", "Second pi/2 pulse"],
+    ["", "acquire", "0,0,120", "Readout acquisition"],
+    ["", "stop", "", ""]
+  ]
+}

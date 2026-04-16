@@ -1,0 +1,19 @@
+{
+  "waveforms": {
+    "0": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  },
+  "weights": {},
+  "acquisitions": {},
+  "program": [
+    ["", "move", "3, R0", "Outer loop counter"],
+    ["outer", "move", "4, R1", "Inner loop counter"],
+    ["", "set_freq", "100,0", "Update NCO frequency"],
+    ["", "upd_param", "", "Commit frequency change"],
+    ["inner", "play", "0,0,20", "Push to RT queue"],
+    ["", "wait", "100", "Push to RT queue"],
+    ["", "loop", "R1, @inner", "Q1 Core local jump"],
+    ["", "add", "R0, 1, R2", "Compute next frequency index"],
+    ["", "loop", "R0, @outer", "Q1 Core local jump"],
+    ["", "stop", "", ""]
+  ]
+}

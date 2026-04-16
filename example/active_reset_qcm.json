@@ -1,0 +1,17 @@
+{
+  "waveforms": {
+    "2": [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]
+  },
+  "weights": {},
+  "acquisitions": {},
+  "program": [
+    ["", "wait_sync", "100", "Synchronize with QRM"],
+    ["", "wait", "212", "Wait for LINQ propagation"],
+    ["", "set_awg_offs", "0.5,0", "Pre-load reset amplitude"],
+    ["", "set_cond", "1,1,0,4", "Enable conditional execution"],
+    ["", "upd_param", "4", "Conditional commit"],
+    ["", "play", "2,0,40", "Conditional π-pulse"],
+    ["", "set_cond", "0,0,0,4", "Disable conditional execution"],
+    ["", "stop", "", ""]
+  ]
+}

@@ -1,0 +1,74 @@
+cabal-version:      3.16
+name:               q1asm-simulator
+version:            0.1.0.0
+license:            NONE
+author:             overshiki
+maintainer:         le.niu@hotmail.com
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    exposed-modules:
+        Q1Asm.Types
+        Q1Asm.Encode
+        Q1Asm.Parser
+        Q1Asm.Loader
+        Q1Asm.Q1Core
+        Q1Asm.RtCore
+        Q1Asm.Queue
+        Q1Asm.Nco
+        Q1Asm.Renderer
+        Q1Asm.Simulator
+        Q1Asm.Cluster
+        Q1Asm.Repl.Queue
+        Q1Asm.Repl.State
+        Q1Asm.Repl.Scheduler
+        Q1Asm.Repl.Display
+        Q1Asm.Repl.Commands
+        Q1Asm.Repl.Loop
+    build-depends:
+        base ^>=4.18.3.0,
+        bytestring >=0.11 && <0.13,
+        binary >=0.8 && <0.9,
+        containers >=0.6 && <0.7,
+        vector >=0.13 && <0.14,
+        text >=2.0 && <2.2,
+        attoparsec >=0.14 && <0.15,
+        aeson >=2.1 && <2.3,
+        stm >=2.5 && <2.6,
+        async >=2.2 && <2.3,
+        mtl >=2.3 && <2.4,
+        transformers >=0.6 && <0.7
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable q1asm-simulator
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.18.3.0,
+        q1asm-simulator,
+        bytestring,
+        text,
+        aeson,
+        vector,
+        containers
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+executable q1asm-repl
+    import:           warnings
+    main-is:          ReplMain.hs
+    build-depends:
+        base ^>=4.18.3.0,
+        q1asm-simulator,
+        bytestring,
+        text,
+        aeson,
+        vector,
+        containers
+    hs-source-dirs:   app
+    default-language: Haskell2010

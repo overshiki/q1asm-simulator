@@ -1,0 +1,18 @@
+{
+  "waveforms": {
+    "0": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  },
+  "weights": {},
+  "acquisitions": {},
+  "program": [
+    ["", "wait_sync", "100", "Synchronize"],
+    ["", "wait", "212", "LINQ latency"],
+    ["", "reset_phase", "", "Pre-load phase reset"],
+    ["", "set_awg_offs", "0.5,0", "Pre-load amplitude"],
+    ["", "set_cond", "1,1,0,4", "Enable conditional execution"],
+    ["", "upd_param", "4", "Commit both conditionally"],
+    ["", "play", "0,0,20", "Conditional coherent pulse"],
+    ["", "set_cond", "0,0,0,4", "Disable conditional execution"],
+    ["", "stop", "", ""]
+  ]
+}

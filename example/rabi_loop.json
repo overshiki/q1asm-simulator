@@ -1,0 +1,18 @@
+{
+  "waveforms": {
+    "0": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  },
+  "weights": {},
+  "acquisitions": {
+    "0": {"num_bins": 10}
+  },
+  "program": [
+    ["", "move", "10, R0", "Repetitions"],
+    ["start", "play", "0,0,20", "Drive pulse"],
+    ["", "wait", "100", "Small delay"],
+    ["", "acquire", "0,0,120", "Measure"],
+    ["", "wait", "200", "Relaxation delay"],
+    ["", "loop", "R0, @start", ""],
+    ["", "stop", "", ""]
+  ]
+}
